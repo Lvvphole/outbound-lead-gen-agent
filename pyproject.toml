@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "outbound-lead-gen"
+version = "0.1.0"
+description = "Manifest-governed outbound control loop runtime"
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-p no:cacheprovider --basetemp=.pytest-tmp"
+pythonpath = ["src"]
+testpaths = ["tests"]
